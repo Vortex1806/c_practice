@@ -100,5 +100,15 @@ int main()
     int **answer = matrixMultiply(matrix1, matrix2, row1, col1, row2, col2);
 
     displaymat(answer, row1, col2);
+
+    for (int i = 0; i < 10; i++)
+    {
+        free(matrix1[i]);
+        free(matrix2[i]);
+        free(answer[i]);
+    }
+    free(matrix1);
+    free(matrix2);
+    free(answer);
     return 0;
 }
